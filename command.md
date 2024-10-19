@@ -2,28 +2,26 @@
 
 Correct Workflow with Explanations:
 Set Global User Name and Email:
-
+---------------------------------------------------------------------------------------------------------
 You set your Git username twice, but your email command is missing an extension.
  
----------------------------------------------------------------------------------------------------------
 git config --global user.name "umashankar1987"
 git config --global user.email "umashankar1987@gmail.com"
+
+---------------------------------------------------------------------------------------------------------
 Initialize a Repository: You initialized a new Git repository and created a file named git_initialization.txt.
 
- 
----------------------------------------------------------------------------------------------------------
 git init
 vi git_initialization.txt  # Create and edit the file
 git add git_initialization.txt  # Add the file to staging area
 git status  # Check status
+
+---------------------------------------------------------------------------------------------------------
 Correct Commands: You used git stastu and git logs, which are typos. The correct commands are:
 
- 
----------------------------------------------------------------------------------------------------------
 git status
 git log  # View commit history
 Add and Commit Files: You modified git_initialization.txt and used git add multiple times. You can use the following flow:
-
  
 ---------------------------------------------------------------------------------------------------------
 vi git_initialization.txt  # Make changes to the file
@@ -44,25 +42,22 @@ However, for staged files, you can use:
 ---------------------------------------------------------------------------------------------------------
 git restore --staged git_initialization_1.txt  # Unstage the file
 git restore git_initialization_1.txt  # Restore working copy from the previous version (if it exists)
-Branching: You created a branch dev, switched between branches, and checked their statuses:
 
- 
+
+Branching: You created a branch dev, switched between branches, and checked their statuses:
 ---------------------------------------------------------------------------------------------------------
 git checkout -b dev  # Create and switch to the dev branch
 git checkout master  # Switch back to the master branch
-Committing and Viewing Logs: You committed updates and wanted to see a compact log of commits:
 
- 
+Committing and Viewing Logs: You committed updates and wanted to see a compact log of commits:
 ---------------------------------------------------------------------------------------------------------
 git log --oneline  # View concise log history
-Switching Between Branches: You used git switch, which is an alternative to git checkout for switching branches:
 
- 
+Switching Between Branches: You used git switch, which is an alternative to git checkout for switching branches:
 ---------------------------------------------------------------------------------------------------------
 git switch dev  # Switch to dev branch
 git switch master  # Switch back to master
 Commit in a New Branch: You created and committed a new file head.txt in the dev branch:
-
  
 ---------------------------------------------------------------------------------------------------------
 git add head.txt  # Add the new file
@@ -98,8 +93,8 @@ This document contains a list of Git commands with their explanations to help yo
 git config --global user.name "umashankar1987"
 git config --global user.email "umashankar1987@gmail.com"
 Explanation: These commands configure the global Git username and email address, which will be used for every commit you make from your machine unless overridden for a specific repository.
+
 2. Initialize a Git Repository
- 
 ---------------------------------------------------------------------------------------------------------
 git init
 Explanation: Initializes a new Git repository in the current directory, setting up the necessary files and structure for version control.
@@ -123,19 +118,19 @@ Explanation: Stages git_initialization.txt for the next commit. This means Git w
 ---------------------------------------------------------------------------------------------------------
 git commit -m "git class started on 19th OCT 2024"
 Explanation: Commits the staged changes to the repository with the message "git class started on 19th OCT 2024". The -m flag allows you to write a commit message.
+
 7. Remove a File from Staging
- 
----------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------
 git rm --cached git_initialization_1.txt
 Explanation: Removes the file git_initialization_1.txt from the staging area (but not the working directory), so it will not be included in the next commit.
+
 8. Delete a File
- 
----------------------------------------------------------------------------------------------------------
+ --------------------------------------------------------------------------------------------------------
 rm -rf git_initialization_1.txt
 Explanation: Permanently deletes the file git_initialization_1.txt from the working directory.
+
 9. Create and Switch to a New Branch
- 
----------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------
 git checkout -b dev
 Explanation: Creates a new branch called dev and switches to it. Branching allows you to work on different features or tasks in isolation from the main project.
 10. Switch Between Branches
@@ -159,23 +154,22 @@ Explanation: Displays a concise log of commits, showing only commit IDs and mess
 git add head.txt
 git commit -m "new file head created in DEV branch"
 Explanation: Adds head.txt to the staging area and commits it with the message "new file head created in DEV branch". This is done while in the dev branch.
+
 13. View List of Branches
- 
 ---------------------------------------------------------------------------------------------------------
 git branch
 Explanation: Lists all the local branches in the repository. The currently active branch will be marked with an asterisk (*).
- 
----------------------------------------------------------------------------------------------------------
+
 git branch -a
 Explanation: Lists all branches, including local and remote branches.
+
 14. View Detailed Information of Last Commit
- 
----------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------
 git show
 Explanation: Displays detailed information about the last commit, including changes made, commit message, and more.
+
 15. Check Git Help
- 
----------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------
 git --help
 Explanation: Opens the Git help documentation, providing a detailed list of all available Git commands and their usage.
 Summary
